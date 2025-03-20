@@ -1,0 +1,38 @@
+ECHO is on.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+</head>
+<body>
+    <h2>To-Do List</h2>
+    <input type="text" id="taskInput" placeholder="New task">
+    <button onclick="addTask()">Add Task</button>
+    <ul id="taskList"></ul>
+
+    <script>
+        function addTask() {
+            let taskInput = document.getElementById("taskInput");
+            let taskList = document.getElementById("taskList");
+
+            if (taskInput.value.trim() === "") return;
+
+            let li = document.createElement("li");
+            li.textContent = taskInput.value;
+
+            let btn = document.createElement("button");
+            btn.textContent = "❌";
+            btn.onclick = function () {
+                li.remove();
+            };
+
+            li.appendChild(btn);
+            taskList.appendChild(li);
+            taskInput.value = "";
+        }
+    </script>
+</body>
+</html>
