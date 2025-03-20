@@ -1,24 +1,50 @@
-ECHO is on.
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Card</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+        }
+        .card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .card h2 {
+            margin: 10px 0;
+            font-size: 22px;
+        }
+        .card p {
+            color: gray;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
-    <div class="profile-card">
-        <img src="profile.jpg" alt="Profile Picture">
+
+    <div class="card">
+        <img src="images/your-image.jpg" alt="Profile Picture">
         <h2>Aditya Gend</h2>
         <p>Software Developer</p>
-        <p>Passionate about coding and technology.</p>
-        <div class="social-icons">
-            <a href="#">🔵</a>
-            <a href="#">🟢</a>
-            <a href="#">🔴</a>
-        </div>
+        <p>Passionate about coding and innovation.</p>
     </div>
+
 </body>
 </html>
